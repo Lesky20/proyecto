@@ -5,7 +5,7 @@ const JuegosPlataforma = () => {
     const [juegos, setJuegos] = useState([])
   return (
     <>
-      <h1>JuegosPlataforma</h1>
+      <h1>PLATAFORMA DE LOS JUEGOS</h1>
     </>
   )
 }

@@ -1,19 +1,34 @@
 import React, { useEffect, useState } from 'react'
 
 const JuegosTitulo = () => {
-    const url = "http://45.236.130.191/juegos.php"
-    const [juegos, setJuegos] = useState([])
+    const [Titulo, setTitulo] = useState([])
 
     useEffect(() => {
-      fetch(url).then((response) => response.json()).then((datos) => setJuegos(datos))
-    }, []);
+      const tituloLS = localStorage.getItem("Titulo")
+      setTitulo(JSON.parse(tituloLS))
+    }, [])
 
   return (
     <>      
-        <h1>Titulo De Los Juegos</h1>
-        <ul>
-          {juegos.map(u => <li>{u.juegos.titulo}</li>)}
-        </ul>
+        <h1>TITULO DE LOS JUEGOS</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>NOMBRE/TITULO</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              Titulo.map(t => (
+                <tr key={t.id}>
+                  <td>{t.juegos.id}</td>
+                  <td>{t.juegos.titulo}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
     </>
   )
 }
