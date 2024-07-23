@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Inicio from './Inicio';
-import JuegosTitulo from './JuegosTitulo';
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <JuegosTitulo />
+    <Inicio />
   </React.StrictMode>
 );
 
