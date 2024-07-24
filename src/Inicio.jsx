@@ -10,7 +10,7 @@ const Inicio = () => {
 
     return (
         <div>
-          <h1>Bienvenido :D</h1>
+          <h1>Bienvenido A Nuestra Pagina De Videojuegos :D</h1>
           <Router>
             <ul>
               <nav>
